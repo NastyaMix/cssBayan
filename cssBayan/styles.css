@@ -127,6 +127,10 @@ h1 {
     text-shadow: none;
   }
 
+  .accordion-item:hover input:checked ~ .accordion-info {
+    animation: none;
+  }
+
   .accordion-item:hover .accordion-info {
     display: flex;
     justify-content: center;
