@@ -1,3 +1,69 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.accordion-bayan {
+  max-width: 320px;
+  min-height: inherit;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: rgb(198, 204, 202);
+  color: blue;
+}
+
+.container {
+  display: block;
+}
+
+h1 {
+  margin: 0;
+  margin-top: 10px;
+  text-align: center;
+  color: black;
+}
+
+.accordion-item {
+  display: block;
+  border-top:2px solid grey;
+}
+
+.accordion-item input{
+  display: none;
+}
+
+.accordion-header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-icon {
+  width: 30px;
+  height: 30px;
+  content: url('assets/plus.svg');
+}
+
+.accordion-info {
+  display: none;
+}
+
+.accordion-item input:checked ~ .accordion-info {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.accordion-info img{
+  width: 70%;
+}
+
+.accordion-item input:checked ~ .accordion-header .header-icon {
+  content: url('assets/xmark.svg');
+}
