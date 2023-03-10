@@ -8,6 +8,11 @@
        url('assets/fonts/unbounded-v3-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+@keyframes spoiler {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
 * {
   box-sizing: border-box;
 }
@@ -56,7 +61,7 @@ h1 {
   width: 30px;
   height: 30px;
   content: url('assets/plus.svg');
-  transition: 0.8s;
+  transition: 1.1s;
 }
 
 .accordion-info {
@@ -126,6 +131,7 @@ h1 {
     display: flex;
     justify-content: center;
     padding: 15px;
+    animation: spoiler 1.3s;
   }
 
   .accordion-item:hover .header-icon {
