@@ -82,6 +82,10 @@ h1 {
     font-size: 26px;
   }
 
+  .accordion-item:hover {
+    cursor: pointer;
+  }
+
   .container:hover .accordion-header{
     color: black;
   }
@@ -89,7 +93,7 @@ h1 {
   .header-icon{
     visibility: hidden;
   }
-  
+
   .container:hover .header-icon{
     visibility: visible;
   }
