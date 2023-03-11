@@ -75,7 +75,7 @@ h1 {
 }
 
 .accordion-info img{
-  min-width: 55%;
+  max-width: 45vw;
 }
 
 .accordion-item input:checked ~ .accordion-header .header-icon {
@@ -89,6 +89,10 @@ h1 {
 
   .header-icon {
     width: 1em;
+  }
+
+  .accordion-info img{
+    max-width: 30vw;
   }
 }
 
@@ -118,6 +122,7 @@ h1 {
   }
 
   .header-icon{
+    width: 1em;
     visibility: hidden;
   }
 
@@ -138,11 +143,12 @@ h1 {
   .accordion-item:hover .accordion-info {
     display: flex;
     justify-content: center;
-    padding: 2em;
+    padding: 1em;
     animation: spoiler 1.3s;
   }
 
   .accordion-item:hover .header-icon {
     transform: rotate(45deg);
   }
+
 }
