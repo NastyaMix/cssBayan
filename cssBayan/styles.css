@@ -72,6 +72,7 @@ h1 {
   display: flex;
   justify-content: center;
   padding: 1em;
+  animation: spoiler 1.3s;
 }
 
 .accordion-info img{
