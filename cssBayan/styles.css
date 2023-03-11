@@ -61,7 +61,7 @@ h1 {
 .header-icon {
   width: 2em;
   content: url('assets/plus.svg');
-  transition: 1.1s;
+  transition: 0.5s;
 }
 
 .accordion-info {
@@ -96,7 +96,7 @@ h1 {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1181px) {
   body {
     font-size: 2em;
   }
@@ -128,6 +128,7 @@ h1 {
 
   .container:hover .header-icon{
     visibility: visible;
+    transition: visibility 0.2s ease;
   }
 
   .container:hover .accordion-header,
@@ -150,5 +151,4 @@ h1 {
   .accordion-item:hover .header-icon {
     transform: rotate(45deg);
   }
-
 }
