@@ -1,0 +1,154 @@
+/* unbounded-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/unbounded-v3-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+       url('assets/fonts/unbounded-v3-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@keyframes spoiler {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+  font-size: 1rem;
+  font-family: 'Unbounded', Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.accordion-bayan {
+  min-height: inherit;
+  padding: 1em;
+  background-color: rgb(255, 245, 187);
+  color: black;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0.5em 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.accordion-item {
+  display: block;
+  border-top: 0.125em solid grey;
+}
+
+.accordion-item input{
+  display: none;
+}
+
+.accordion-header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-icon {
+  width: 2em;
+  content: url('assets/plus.svg');
+  transition: transform 0.5s;
+}
+
+.accordion-info {
+  display: none;
+}
+
+.accordion-item input:checked ~ .accordion-info {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  animation: spoiler 1.3s;
+}
+
+.accordion-info img{
+  max-width: 45vw;
+}
+
+.accordion-item input:checked ~ .accordion-header .header-icon {
+  transform: rotate(45deg);
+}
+
+@media (min-width: 820px) {
+  body {
+    font-size: 1.5em;
+  }
+
+  .header-icon {
+    width: 1em;
+  }
+
+  .accordion-info img{
+    max-width: 30vw;
+  }
+}
+
+@media (min-width: 1181px) {
+  body {
+    font-size: 2em;
+  }
+
+  .accordion-bayan {
+    color: white;
+    text-shadow: 0.125em 0 0.07em #000,
+                  0 0.07em 0.07em #000,
+                  -0.125em 0 0.07em #000,
+                  0 -0.07em 0.07em #000;
+  }
+
+  .container {
+    max-width: 60%;
+  }
+
+  .accordion-item:hover {
+    cursor: pointer;
+  }
+
+  .container:hover .accordion-header{
+    color: black;
+  }
+
+  .header-icon{
+    width: 1em;
+    visibility: hidden;
+  }
+
+  .container:hover .header-icon{
+    visibility: visible;
+  }
+
+  .container:hover .accordion-header,
+  .accordion-item input:checked ~ .accordion-header {
+    color: black;
+    text-shadow: none;
+  }
+
+  .accordion-item:hover > input:checked ~ .accordion-info {
+    animation: spoiler 0s;
+  }
+
+  .accordion-item:hover .accordion-info {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    animation: spoiler 1.3s;
+  }
+
+  .accordion-item:hover .header-icon {
+    transform: rotate(45deg);
+  }
+}
