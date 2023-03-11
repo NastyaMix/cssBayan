@@ -61,7 +61,7 @@ h1 {
 .header-icon {
   width: 2em;
   content: url('assets/plus.svg');
-  transition: 0.5s;
+  transition: transform 0.5s;
 }
 
 .accordion-info {
@@ -129,7 +129,6 @@ h1 {
 
   .container:hover .header-icon{
     visibility: visible;
-    transition: visibility 0.2s ease;
   }
 
   .container:hover .accordion-header,
@@ -138,8 +137,8 @@ h1 {
     text-shadow: none;
   }
 
-  .accordion-item:hover input:checked ~ .accordion-info {
-    animation: none;
+  .accordion-item:hover > input:checked ~ .accordion-info {
+    animation: spoiler 0s;
   }
 
   .accordion-item:hover .accordion-info {
